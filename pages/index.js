@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Masonry from "react-masonry-css";
 import { ImageCard } from "../components";
-
 const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&image_type=photo`;
 
 export const getStaticProps = async () => {
@@ -21,15 +20,22 @@ export default function Home({ images }) {
     500: 1,
   };
 
-  const img = images[0];
   return (
     <div>
       <Head>
         <title>BixyAlbum</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="container p-8">
-        <ImageCard image={img} />
+      <section className="container  w-full my-8 mx-auto">
+        <Masonry
+          breakpointCols={breakPoints}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {images.map((image) => (
+            <ImageCard key={image.id} image={image} />
+          ))}
+        </Masonry>
       </section>
     </div>
   );
