@@ -23,12 +23,12 @@ export default function Home({ images }) {
   };
 
   return (
-    <div>
+    <div className="bg-gray-50">
       <Head>
         <title>BixyAlbum</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="container  w-full my-8 mx-auto">
+      <section className="container w-full py-8 mx-auto">
         <Masonry
           breakpointCols={breakPoints}
           className="my-masonry-grid"

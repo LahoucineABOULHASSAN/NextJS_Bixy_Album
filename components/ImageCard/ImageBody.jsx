@@ -48,7 +48,7 @@ const ImageBody = ({ image }) => {
   const views = formatNum(image.views);
   const downloads = formatNum(image.downloads);
   return (
-    <ul className="border rounded-lg border-transparent bg-gray-100 grid grid-cols-3 divide-x divide-gray-300 w-10/12 my-2 mx-auto">
+    <ul className="border z-20 rounded-lg border-transparent bg-gray-100 grid grid-cols-3 divide-x divide-gray-300 w-full">
       <li className="text-md flex flex-col items-center cursor-default hover:bg-red-100 transition duration-700 ease py-2">
         {heart}
         <span className="text-gray-500 mt-1">{likes}</span>
