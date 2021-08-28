@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Masonry from "react-masonry-css";
 import { ImageCard } from "../components";
-const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&image_type=photo`;
+
+const SEARCH = "";
+const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&q=${SEARCH}&image_type=photo`;
 
 export const getStaticProps = async () => {
   const response = await fetch(URL);
