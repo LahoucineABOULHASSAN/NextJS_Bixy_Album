@@ -1,3 +1,5 @@
+import { formatNum } from "../../utilities/main";
+
 const heart = (
   <svg
     className="bi bi-heart-fill inline-block fill-current text-red-600"
@@ -42,19 +44,22 @@ const download = (
 );
 
 const ImageBody = ({ image }) => {
+  const likes = formatNum(image.likes);
+  const views = formatNum(image.views);
+  const downloads = formatNum(image.downloads);
   return (
     <ul className="border rounded-lg border-transparent bg-gray-100 grid grid-cols-3 divide-x divide-gray-300 w-10/12 my-2 mx-auto">
       <li className="text-md flex flex-col items-center cursor-default hover:bg-red-100 transition duration-700 ease py-2">
         {heart}
-        <span className="text-gray-500 mt-1">{image.likes}</span>
+        <span className="text-gray-500 mt-1">{likes}</span>
       </li>
       <li className="text-md flex flex-col items-center cursor-default hover:bg-gray-200 transition duration-700 ease py-2">
         {view}
-        <span className="text-gray-500 mt-1">{image.views}</span>
+        <span className="text-gray-500 mt-1">{views}</span>
       </li>
       <li className="text-md flex flex-col items-center cursor-default hover:bg-green-100 transition duration-700 ease py-2">
         {download}
-        <span className="text-gray-500 mt-1">{image.downloads}</span>
+        <span className="text-gray-500 mt-1">{downloads}</span>
       </li>
     </ul>
   );
