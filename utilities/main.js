@@ -5,3 +5,9 @@ export const formatNum = (n) => {
   if (n >= 1e9 && n < 1e12) return +(n / 1e9).toFixed(1) + "B";
   if (n >= 1e12) return +(n / 1e12).toFixed(1) + "T";
 };
+
+export const scroll = () => {
+  const sticky = document.querySelector("#main").offsetTop;
+  document.body.scrollTop = sticky - 1; // For Safari
+  document.documentElement.scrollTop = sticky - 1;
+};

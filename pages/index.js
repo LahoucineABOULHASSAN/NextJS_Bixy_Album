@@ -23,7 +23,7 @@ export default function Home({ images }) {
   };
 
   return (
-    <div className="bg-gray-50">
+    <div id="main" className="bg-gray-50">
       <Head>
         <title>BixyAlbum</title>
         <link rel="icon" href="/favicon.ico" />
