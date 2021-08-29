@@ -27,13 +27,15 @@ const Header = () => {
           Pictures are from the{" "}
           <a
             className="font-semibold hover:underline hover:text-gray-300"
-            href="https://pixabay.com/api"
+            href="https://pixabay.com/api/docs/"
+            target="_blank"
+            rel="noreferror"
           >
             Pixabay API
           </a>
         </h2>
         <button
-          className="flex flex-row justify-center text-md font-bold tracking-widest stroke-current stroke-1 bg-red-400 hover:bg-red-500 transition ease-in-out duration-700 rounded-2xl py-3 pr-4 pl-5 mt-4"
+          className="flex flex-row justify-center text-md font-bold tracking-widest stroke-current stroke-1 hover:bg-red-700 transition ease-in-out duration-700 rounded-2xl py-3 pr-4 pl-5 mt-4"
           onClick={scroll}
         >
           Scroll Down {arrow}

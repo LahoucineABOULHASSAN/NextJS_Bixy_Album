@@ -2,7 +2,7 @@ import { formatNum } from "../../utilities/main";
 
 const heart = (
   <svg
-    className="bi bi-heart-fill inline-block fill-current text-red-600"
+    className="bi bi-heart-fill inline-block fill-current text-red-500"
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
