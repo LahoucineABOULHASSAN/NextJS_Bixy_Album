@@ -6,7 +6,7 @@ const arrow = (
     width="24"
     height="24"
     fill="currentColor"
-    class="bi bi-arrow-down-short inline-block animate-bounce"
+    className="bi bi-arrow-down-short inline-block animate-bounce"
     viewBox="0 0 16 16"
   >
     <path
@@ -18,7 +18,10 @@ const arrow = (
 
 const Header = () => {
   return (
-    <header className="flex flex-col items-center justify-center">
+    <header
+      id="header"
+      className="flex flex-col items-center justify-center bg-gradient-to-r from-red-500 to-pink-500"
+    >
       <div className="header flex flex-col items-center justify-center tracking-widest w-full h-full">
         <h1 className="text-shadow-md text-4xl text-gray-400 mb-2">
           Welcome to BixyAlbum

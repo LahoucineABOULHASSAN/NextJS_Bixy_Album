@@ -1,9 +1,17 @@
 import Head from "next/head";
+import { useState } from "react";
 import Masonry from "react-masonry-css";
-import { ImageCard } from "../components";
+import { ImageCard, SearchForm } from "../components";
 
 const SEARCH = "";
-const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&q=${SEARCH}&image_type=photo`;
+const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&q=${SEARCH}&image_type=photo&per_page=50`;
+
+const breakPoints = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1,
+};
 
 export const getStaticProps = async () => {
   const response = await fetch(URL);
@@ -15,19 +23,18 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ images }) {
-  const breakPoints = {
-    default: 4,
-    1100: 3,
-    700: 2,
-    500: 1,
-  };
+  const [searchTerm, setSearchTerm] = useState("");
 
+  const handleFilter = (term) => {
+    setSearchTerm(term);
+  };
   return (
     <div id="main" className="bg-gray-50">
       <Head>
         <title>BixyAlbum</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <SearchForm handleFilter={handleFilter} />
       <section className="container w-full py-8 mx-auto">
         <Masonry
           breakpointCols={breakPoints}
