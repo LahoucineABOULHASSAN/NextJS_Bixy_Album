@@ -11,3 +11,15 @@ export const scroll = () => {
   document.body.scrollTop = sticky - 1; // For Safari
   document.documentElement.scrollTop = sticky - 1;
 };
+
+export const openModal = (src) => {
+  let modal = document.getElementById("myModal");
+  let modalImg = document.getElementById("myImg");
+
+  modal.style.display = "block";
+  modalImg.src = src;
+};
+export const closeModal = () => {
+  let modal = document.getElementById("myModal");
+  modal.style.display = "none";
+};

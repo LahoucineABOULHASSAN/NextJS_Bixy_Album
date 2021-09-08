@@ -41,7 +41,8 @@ header#header {
   -moz-background-size: cover;
   -webkit-background-size: cover;
 }
-header .header {
+header .header,
+.modal {
   background: #0000009a;
 }
 header button {
