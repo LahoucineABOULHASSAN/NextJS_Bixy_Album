@@ -4,7 +4,7 @@ const fullScreen = (
     width="16"
     height="16"
     fill="currentColor"
-    class="bi bi-arrows-fullscreen fill-current text-blue-400"
+    className="bi bi-arrows-fullscreen fill-current text-blue-400"
     viewBox="0 0 16 16"
   >
     <path
