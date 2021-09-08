@@ -48,6 +48,9 @@ header .header,
 header button {
   background: var(--red);
 }
+#myImg {
+  max-height: 90%;
+}
 /* Footer style */
 footer {
   background: var(--red);

@@ -13,11 +13,7 @@ const ImageModal = () => {
         >
           &times;
         </h1>
-        <img
-          id="myImg"
-          className="modal-content block w-11/12 mx-auto"
-          alt="modal"
-        />
+        <img id="myImg" className="modal-content w-11/12 mx-auto" alt="modal" />
       </div>
     </div>
   );
