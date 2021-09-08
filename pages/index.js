@@ -54,7 +54,7 @@ export default function Home({ images }) {
   return (
     <div id="main" className="bg-gray-50">
       <Head>
-        <title>BixyAlbum</title>
+        <title>BixyAlbum | Home Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SearchForm handleFilter={handleFilter} />
