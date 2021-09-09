@@ -1,3 +1,58 @@
+# BixyAlbum
+
+BixyAlbum a front-end web app basic on [pixabay api](https://pixabay.com/api/docs/).
+This app was built using [Next js](https://nextjs.org/docs) and [Tailwind css](https://tailwindcss.com/).
+
+The app provides the fetched pictures from the api on form of grid, each item contains information about the picture such as the user, likes, views, downloads, and tags.
+
+# Installation
+
+To be able to use this app project, you have to make sure you have `nodeJs` installed on your computer,
+to make sure if it is run the command `node --version` in the terminal you use.
+it is required so you can use npm to install the depandencies of this project via this command `npm install`
+
+to compile your code run the following command:
+`npm run dev`
+
+# Usage
+
+You can filter the results search on the name, and you can click on full screen button to view the picture on the modal.
+
+# links
+
+[my portfolio](https://aboulhassan.netlify.app/).
+[my github](https://github.com/LahoucineABOULHASSAN).
+[image address](https://source.unsplash.com/random/).
+
+[node js](https://nodejs.org/en/download/).
+[Next js](https://nextjs.org/docs).
+[Tailwind css](https://tailwindcss.com/).
+[Pixabay API](https://pixabay.com/api/docs/).
+
+# License
+
+MIT License
+
+Copyright (c) [2021] [lahoucine aboulhassan](https://aboulhassan.netlify.app/).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
