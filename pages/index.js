@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
   const data = await response.json();
 
   return {
-    props: { images: data.hits },
+    props: { images: data.hits.slice(0, 6) },
   };
 };
 
@@ -61,14 +61,14 @@ export default function Home({ images }) {
       .map((image) => <ImageCard key={image.id} image={image} />);
 
   return (
-    <div id="main" className="bg-gray-50 w-full px-4">
+    <div id="main" className="bg-gray-50 w-full px-4 py-10">
       <Head>
         <title>BixyAlbum | Home Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {!images && loading}
       {data && (
-        <section className="w-full md:w-10/12  my-10 mx-auto">
+        <section className="w-full md:w-10/12 mx-auto">
           <SearchForm handleFilter={handleFilter} />
           <ImageModal />
           {!data.length && alert}
