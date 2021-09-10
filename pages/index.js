@@ -6,7 +6,7 @@ import { ImageCard, ImageModal, SearchForm } from "../components";
 const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&image_type=photo&per_page=200`;
 
 const breakPoints = {
-  default: 6,
+  default: 5,
   1100: 4,
   700: 2,
   500: 1,
