@@ -6,8 +6,8 @@ import { ImageCard, ImageModal, SearchForm } from "../components";
 const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&image_type=photo&per_page=200`;
 
 const breakPoints = {
-  default: 5,
-  1100: 4,
+  default: 4,
+  1100: 3,
   700: 2,
   500: 1,
 };
@@ -61,18 +61,18 @@ export default function Home({ images }) {
       .map((image) => <ImageCard key={image.id} image={image} />);
 
   return (
-    <div id="main" className="bg-gray-50 w-full px-4 py-10">
+    <div id="main" className="bg-gray-50 w-full px-4 sm:px-6 lg:p-8 py-10">
       <Head>
         <title>BixyAlbum | Home Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {!images && loading}
       {data && (
-        <section className="w-full md:w-10/12 mx-auto">
+        <section className="w-full mx-auto">
           <SearchForm handleFilter={handleFilter} />
           <ImageModal />
           {!data.length && alert}
-          <section className="container mt-10 w-full">
+          <section className="container mt-10 mx-auto w-full lg:w-11/12">
             <Masonry
               breakpointCols={breakPoints}
               className="my-masonry-grid"
