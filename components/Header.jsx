@@ -22,11 +22,11 @@ const Header = () => {
       id="header"
       className="flex flex-col items-center justify-center bg-gradient-to-r from-red-500 to-pink-500"
     >
-      <div className="header flex flex-col items-center justify-center tracking-widest w-full h-full">
-        <h1 className="text-shadow-md text-4xl text-gray-400 mb-2">
+      <div className="header flex flex-col items-center justify-center tracking-widest p-4 text-center w-full h-full">
+        <h1 className="text-shadow-md text-2xl md:text-4xl text-gray-400 mb-2">
           Welcome to BixyAlbum
         </h1>
-        <h2 className="text-shadow-md text-2xl text-gray-400 mb-1">
+        <h2 className="text-shadow-md text-lg md:text-2xl text-gray-400 mb-1">
           Pictures are from the{" "}
           <a
             className="font-semibold hover:underline hover:text-gray-300"

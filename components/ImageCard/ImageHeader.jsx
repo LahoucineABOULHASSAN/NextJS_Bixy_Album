@@ -3,10 +3,10 @@ import { openModal } from "../../utilities/main";
 const fullScreen = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
+    width="20"
+    height="20"
     fill="currentColor"
-    className="bi bi-arrows-fullscreen fill-current text-blue-400"
+    className="bi bi-arrows-fullscreen fill-current text-blue-800"
     viewBox="0 0 16 16"
   >
     <path
@@ -18,24 +18,26 @@ const fullScreen = (
 
 const ImageHeader = ({ image }) => {
   return (
-    <div className="hidden z-10 absolute bottom-0 left-0 bg-black bg-opacity-60 flex-row items-center justify-between w-full py-3 px-4">
-      <div className="flex flex-row items-center">
-        <img
-          className="w-10 h-10 rounded-full"
-          src={
-            image.userImageURL ||
-            "https://via.placeholder.com/900?text=Image+Not+Found"
-          }
-          alt={image.user}
-        />
-        <h3 className="text-md text-gray-300 mx-3">{image.user}</h3>
+    <div className="sm:hidden z-10 absolute bottom-0 left-0 bg-black bg-opacity-60 flex-row items-center justify-between w-full py-3 px-4">
+      <div className="flex flex-row items-center justify-between w-full">
+        <div className="flex flex-row items-center">
+          <img
+            className="w-10 h-10 rounded-full"
+            src={
+              image.userImageURL ||
+              "https://via.placeholder.com/900?text=Image+Not+Found"
+            }
+            alt={image.user}
+          />
+          <h3 className="text-md text-gray-300 mx-3">{image.user}</h3>
+        </div>
+        <span
+          onClick={() => openModal(image.largeImageURL)}
+          className="cursor-pointer block z-40 bg-blue-100 hover:bg-blue-200 transition duration-700 ease p-2 rounded"
+        >
+          {fullScreen}
+        </span>
       </div>
-      <span
-        onClick={() => openModal(image.largeImageURL)}
-        className="cursor-pointer bg-blue-100 hover:bg-blue-200 transition duration-700 ease p-1 rounded"
-      >
-        {fullScreen}
-      </span>
     </div>
   );
 };
