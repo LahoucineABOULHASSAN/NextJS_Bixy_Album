@@ -29,7 +29,7 @@ export default function Home({ images }) {
   };
 
   const alert = (
-    <div className="flex flex-row items-center justify-center rounded-2xl w-full sm:w-11/12 text-xl sm:text-2xl text-center capitalize bg-pink-200 p-4 md:p-8 my-8 mx-auto">
+    <div className="flex flex-row items-center justify-center rounded-2xl w-full sm:w-11/12 text-xl sm:text-2xl text-center capitalize bg-pink-200 p-4 my-8 mx-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
