@@ -6,8 +6,8 @@ import { ImageCard, ImageModal, SearchForm } from "../components";
 const URL = `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_BIXBAY_API_KEY}&image_type=photo&per_page=200`;
 
 const breakPoints = {
-  default: 4,
-  1100: 3,
+  default: 6,
+  1100: 4,
   700: 2,
   500: 1,
 };
@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
   const data = await response.json();
 
   return {
-    props: { images: data.hits.slice(0, 6) },
+    props: { images: data.hits },
   };
 };
 
